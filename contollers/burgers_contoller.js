@@ -16,7 +16,7 @@ router.get("/", function(req, res) {
   
   router.post("/api/burgers", function(req, res) {
     console.log(req.body)
-    burgers.create("burgers", "burger_name", req.body.name, function(data){
+    burgers.create("burger_name", req.body.name, function(data){
       console.log(data);
       res.json(data)
     })

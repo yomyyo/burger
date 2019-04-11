@@ -52,13 +52,16 @@ var orm = {
   },
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
-
+    console.log(table);
+    console.log(cols);
+    console.log(vals);
+    console.log(cb);
     queryString += " (";
     queryString += cols.toString();
     queryString += ") ";
-    queryString += "VALUES (";
-    queryString += printQuestionMarks(vals.length);
-    queryString += ") ";
+    queryString += "VALUES ('";
+    queryString += vals.toString();
+    queryString += "'); ";
 
     console.log(queryString);
 
