@@ -1,12 +1,13 @@
 <h1>Burgers</h1>
 
 <h2>Burgers to devour!</h2>
+<h3>Click to Devour</h3>
 
 <ul>
   {{#each burger}}
   {{#unless devoured}}
     <li>
-      <button class="not-eaten" data-id="{{id}}">{{burger_name}}</button>>
+      <button class="not-eaten" data-id="{{id}}">{{burger_name}}</button>
     </li>
     {{/unless}}
   {{/each}}
