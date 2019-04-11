@@ -1,8 +1,10 @@
 var express = require("express");
 
+var app = express();
+
 var PORT = process.env.PORT || 8080;
 
-var app = express();
+//HEROKU IS NOT CURRENTLY WORKING
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
