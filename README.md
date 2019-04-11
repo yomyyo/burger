@@ -1,4 +1,5 @@
 <h1>HEROKU DOES NOT CURRENTLY WORK </h1>
+<h2>UNABLE TO GET JAWS_DB RUNNING</h2>
 
 This application is a faux burger eater that lets you add burgers and eat them via MySQL database
 
