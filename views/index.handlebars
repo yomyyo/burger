@@ -4,18 +4,20 @@
 
 <ul>
   {{#each burger}}
+  {{#unless devoured}}
     <li>
-      <p>{{burger_name}}</p>
+      <button class="not-eaten" data-id="{{id}}">{{burger_name}}</button>>
     </li>
+    {{/unless}}
   {{/each}}
 </ul>
 
 <h2>Burgers devoured!</h2>
 
 <ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
+  {{#each burger}}
+    {{#if devoured}}
+      <p>{{burger_name}}</p>
     {{/if}}
   {{/each}}
 </ul>

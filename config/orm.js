@@ -78,9 +78,9 @@ var orm = {
     var queryString = "UPDATE " + table;
 
     queryString += " SET ";
-    queryString += objToSql(objColVals);
+    queryString += objColVals;
     queryString += " WHERE ";
-    queryString += condition;
+    queryString += condition  + ";";
 
     console.log(queryString);
     connection.query(queryString, function(err, result) {

@@ -1,20 +1,16 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $(".change-sleep").on("click", function(event) {
+    $(".not-eaten").on("click", function(event) {
       var id = $(this).data("id");
-      var newSleep = $(this).data("newsleep");
-  
-      var newSleepState = {
-        sleepy: newSleep
-      };
+      console.log(id);
   
       // Send the PUT request.
       $.ajax("/api/burgers/" + id, {
         type: "PUT",
-        data: newSleepState
+        data: true
       }).then(
         function() {
-          console.log("changed sleep to", newSleep);
+          console.log("DEVOUERED");
           // Reload the page to get the updated list
           location.reload();
         }
