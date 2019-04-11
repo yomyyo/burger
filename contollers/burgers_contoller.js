@@ -5,24 +5,20 @@ var router = express.Router();
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-    cat.all(function(data) {
+    burgers.all(function(data) {
       var hbsObject = {
         burger: data
       };
-      console.log(hbsObject);
+      console.log(hbsObject.burger[0].burger_name);
       res.render("index", hbsObject);
     });
   });
   
   router.post("/api/burgers", function(req, res) {
-    burgers.create([
-      "burger", "devouer"
-    ], [
-      req.body.burger_name, req.body.devouered
-    ], function(result) {
-      // Send back the ID of the new quote
-      res.json({ id: result.insertId });
-    });
+    burgers.create("burgers", "burger_name", req.body.burger_name, function(data){
+      console.log(data);
+      res.json(data)
+    })
   });
   
   router.put("/api/burgers/:id", function(req, res) {
