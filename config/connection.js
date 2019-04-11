@@ -6,7 +6,6 @@ var connection = mysql.createConnection({
   user: "root",
   password: "dontcare",
   database: "burgers_db",
-  socketPath: '/var/run/mysqld/mysqld.sock'
 });
 
 // Make connection.
