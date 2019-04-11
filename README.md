@@ -1,5 +1,3 @@
-# burger
-
 <h1>HEROKU DOES NOT CURRENTLY WORK </h1>
 
 This application is a faux burger eater that lets you add burgers and eat them via MySQL database
